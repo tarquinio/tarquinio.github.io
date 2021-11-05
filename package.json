@@ -2,6 +2,9 @@
   "name": "tarquinio.github.io",
   "version": "1.0.0",
   "description": "apartment website",
+  "scripts": {
+    "build": "esbuild src/index.jsx --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=docs/index.js "
+  },
   "main": "index.js",
   "repository": "git@github.com:tarquinio/tarquinio.github.io.git",
   "author": "Agustin Castiarena <agustin.castiarena@realworld-one.com>",
