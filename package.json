@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack serve",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "prepare": "husky install"
   },
   "main": "index.js",
   "repository": "git@github.com:tarquinio/tarquinio.github.io.git",
@@ -61,7 +62,8 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --cache --fix",
-      "prettier --write"
+      "prettier --write",
+      "yarn build"
     ]
   }
 }
