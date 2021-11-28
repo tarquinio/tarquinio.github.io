@@ -11,6 +11,6 @@ export const App = () => (
       Dolorum exercitationem fugiat illo libero minus necessitatibus sequi,
       suscipit velit!
     </Text>
-    <Button>Holis button</Button>
+    <Button> Holis button</Button>
   </ChakraProvider>
 )
