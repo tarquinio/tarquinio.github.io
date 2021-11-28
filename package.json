@@ -60,7 +60,7 @@
     "style-loader": "3.3.1"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "src/*.{js,jsx,ts,tsx}": [
       "eslint --cache --fix",
       "prettier --write",
       "yarn build"
