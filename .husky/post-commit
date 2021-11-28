@@ -1,11 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-git ls-files --others --error-unmatch docs >/dev/null 2>&1; ec=$?
-if test "$ec" = 0; then
-    git commit -am 'auto build'
-elif test "$ec" = 1; then
+if test "$(git status --porcelain docs 2>/dev/null| wc -l)" = 0; then
     echo no untracked files
 else
-    echo error from ls-files
+    git commit -am 'auto build'
 fi
