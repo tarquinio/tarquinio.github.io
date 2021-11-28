@@ -1,8 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-if test "$(git status --porcelain docs 2>/dev/null| wc -l)" = 0; then
-    echo no untracked files
-else
-    git commit -am 'auto build'
-fi

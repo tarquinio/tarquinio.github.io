@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChakraProvider, Heading, Text } from '@chakra-ui/react'
+import { Button, ChakraProvider, Heading, Text } from '@chakra-ui/react'
 import { theme } from './theme'
 
 export const App = () => (
@@ -11,5 +11,6 @@ export const App = () => (
       Dolorum exercitationem fugiat illo libero minus necessitatibus sequi,
       suscipit velit!
     </Text>
+    <Button>Holis button</Button>
   </ChakraProvider>
 )
