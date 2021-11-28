@@ -11,5 +11,10 @@ export const App = () => (
       Dolorum exercitationem fugiat illo libero minus necessitatibus sequi,
       suscipit velit!
     </Text>
+    <Text>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+      eligendi, enim esse facilis fuga nesciunt nostrum quis rem, rerum suscipit
+      ullam vel. Aliquam debitis in magni nesciunt nisi quidem reprehenderit!
+    </Text>
   </ChakraProvider>
 )
