@@ -56,10 +56,6 @@ module['exports'] = {
       maxInitialRequests: Infinity,
       minSize: 0,
       cacheGroups: {
-        sharedLib: {
-          test: /[\\/](shared-lib)[\\/]/,
-          name: 'shared-lib',
-        },
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
