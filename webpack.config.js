@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { SourceMapDevToolPlugin } = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
