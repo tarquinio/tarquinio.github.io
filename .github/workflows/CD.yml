@@ -1,4 +1,4 @@
-name: Build Tarquinio
+name: Tarquinio CD
 
 on:
   push:
@@ -8,8 +8,10 @@ on:
 
 jobs:
   build:
-    name: Test
+    name: Build
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production
     steps:
       - uses: actions/checkout@v2
       - uses: borales/actions-yarn@v2.3.0
@@ -18,16 +20,3 @@ jobs:
       - uses: borales/actions-yarn@v2.3.0
         with:
           cmd: build # will run `yarn build` command
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: test # will run `yarn test` command
-
-
-    - name: Install
-      uses: borales/actions-yarn@v2.3.0
-      with:
-        cmd: install
-    - name: Build
-      uses: borales/actions-yarn@2.3.0
-      with:
-        cmd: build
