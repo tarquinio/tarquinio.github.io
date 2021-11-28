@@ -2,9 +2,8 @@ name: Tarquinio CD
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -13,8 +12,17 @@ jobs:
     env:
       NODE_ENV: production
     steps:
-      - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.3.0
-        name: Install Dependencies and build
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          npm i -g yarn
+          yarn ci
+          yarn build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
-          cmd: install && yarn build # will run `yarn install` command
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
