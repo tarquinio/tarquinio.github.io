@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { SourceMapDevToolPlugin } = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-// const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const TARGET = ['chrome64', 'edge79', 'firefox67', 'safari11.1']
 
@@ -18,14 +18,6 @@ const plugins = [
     chunksSortMode: 'auto',
   }),
   new CleanWebpackPlugin(),
-  // new CopyWebpackPlugin({
-  //   patterns: [
-  //     {
-  //       from: path.resolve(__dirname, 'src/favicon.ico'),
-  //       to: path.resolve(__dirname, 'docs/favicon.ico'),
-  //     },
-  //   ],
-  // }),
   isProd
     ? new SourceMapDevToolPlugin({ filename: '[file].map' })
     : new CompressionPlugin({
@@ -86,7 +78,7 @@ module['exports'] = {
         use: ['source-map-loader'],
       },
       {
-        test: [/\.webm$/, /\.png$/i],
+        test: [/\.webm$/, /\.png$/i, /\.jpg$/i, /\.jpeg$/i],
         use: ['file-loader'],
       },
     ],

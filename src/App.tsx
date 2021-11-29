@@ -1,16 +1,12 @@
 import React from 'react'
-import { Button, ChakraProvider, Heading, Text } from '@chakra-ui/react'
-import { theme } from './theme'
+import { Route, Routes } from 'react-router-dom'
+import { AppProviders } from './AppProviders'
+import { Intro } from './pages/Intro'
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Heading>Tarquinio`s website</Heading>
-    <Text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at,
-      consequatur facilis nesciunt non pariatur porro sint sunt velit veritatis.
-      Dolorum exercitationem fugiat illo libero minus necessitatibus sequi,
-      suscipit velit!
-    </Text>
-    <Button> Holis button</Button>
-  </ChakraProvider>
+  <AppProviders>
+    <Routes>
+      <Route element={<Intro />} path="/" />
+    </Routes>
+  </AppProviders>
 )
