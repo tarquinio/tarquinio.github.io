@@ -1,7 +1,7 @@
 {
-  "name": "tarquinio.github.io",
+  "name": "codersouth",
   "version": "1.0.0",
-  "description": "apartment website",
+  "description": "codersouth",
   "scripts": {
     "build": "webpack",
     "start": "webpack serve",
@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "repository": "git@github.com:tarquinio/tarquinio.github.io.git",
-  "author": "Agustin Castiarena <agustin.castiarena@realworld-one.com>",
+  "author": "Agustin Castiarena <castiarena@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@chakra-ui/react": "1.6.12",
