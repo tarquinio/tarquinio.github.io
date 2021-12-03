@@ -29,7 +29,7 @@ const plugins = [
 ]
 
 // eslint-disable-next-line functional/immutable-data
-module['exports'] = {
+module.exports = {
   entry: {
     app: './src/index.tsx',
   },
@@ -78,7 +78,7 @@ module['exports'] = {
         use: ['source-map-loader'],
       },
       {
-        test: [/\.webm$/, /\.png$/i, /\.jpg$/i, /\.jpeg$/i],
+        test: [/\.webm$/, /\.png$/i, /\.jpg$/i, /\.jpeg$/i, /\.svg$/i],
         use: ['file-loader'],
       },
     ],
